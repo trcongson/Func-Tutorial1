@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+    let galaxy1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let galaxy2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let star = prompt("Nhập tên 1 ngôi sao: ", "Polaris");
+    alert(search(star));
+
+    function search(a) {
+        let b;
+        for (let i =0; i<galaxy1.length;i++){
+            if (a = galaxy1[i]){
+                b = i;
+                break;
+            }
+        }
+        if (b === undefined){
+            return "Không có ngôi sao này";
+        }
+        return "ngôi sao " + a + " thuộc chòm sao " + galaxy2[b];
+    }
+
+</script>
+</body>
+</html>
